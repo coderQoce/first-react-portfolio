@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Web by Hyperspace</title>
+    <link rel="stylesheet" href="styles.css">
+</head> 
+<style>
+    body {
+    background-color: #0f0f0f;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #161616;
+}
+
+.download-btn {
+    background: #2d2d2d;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.main-content {
+    display: flex;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 200px;
+    background: #1a1a1a;
+    padding: 20px;
+}
+
+.network-section, .network-stats, .prompt-section, .network-activity {
+    background: #1a1a1a;
+    padding: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.stat {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.network-activity .activity-item {
+    background: #222;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+</style>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Node Web by Hyperspace</h1>
+            <button class="download-btn">Download App</button>
+        </header>
+        <div class="main-content">
+            <aside class="sidebar">
+                <h2>Node</h2>
+            </aside>
+            <section class="network-section">
+                <div class="network-info">
+                    <h3>Network</h3>
+                    <button class="network-btn">Hyperspace Community</button>
+                    <p>Public Key: HjRcCyu...guALgp</p>
+                    <p>Status: <span class="connected">Connected</span></p>
+                </div>
+                <div class="capabilities">
+                    <h3>Capabilities</h3>
+                    <p>Maintain the capabilities of your nodes</p>
+                    <p>Large Language Models</p>
+                    <p>Llama-3.2-1B-Instruct</p>
+                </div>
+            </section>
+            <section class="network-stats">
+                <div class="stat">Total Nodes: <span>1.7M</span></div>
+                <div class="stat">Connected Nodes: <span>261K</span></div>
+                <div class="stat">Total Tokens: <span>73.8M</span></div>
+                <div class="stat">Models Served: <span>616</span></div>
+            </section>
+            <section class="prompt-section">
+                <h3>Prompt</h3>
+                <input type="text" placeholder="Type your prompt...">
+                <button>Send To Network</button>
+            </section>
+            <section class="network-activity">
+                <h3>Network Activity</h3>
+                <div class="activity-item">
+                    <p>Prompt: Can you explain how to write an HTTP server in Rust?</p>
+                    <p>Status: <span class="status">In Progress</span></p>
+                </div>
+                <div class="activity-item">
+                    <p>Prompt: Other south let budget side not deal sea test dream society history amount.</p>
+                    <p>Status: <span class="status">In Progress</span></p>
+                </div>
+                <div class="activity-item">
+                    <p>Prompt: Address green reduce perform standard series learn early two arrive together.</p>
+                    <p>Status: <span class="status">In Progress</span></p>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
