@@ -25,15 +25,15 @@ const projectsData = [
   //   gitUrl: "https://github.com/coderQoce/chat-box.git",
   //   previewUrl: "/",
   // },
-  // {
-  //   id: 3,
-  //   title: "Yoruba Homonym System",
-  //   description: "A system that allows you to search for Yoruba Homonyms",
-  //   image: "/images/homonyms.jpg",
-  //   tag: ["All", "React"],
-  //   gitUrl: "https://github.com/coderQoce/yoruba-homonyms.git",
-  //   previewUrl: "https://yoruba-orthography.vercel.app/",
-  // },
+  {
+    id: 3,
+    title: "Yoruba Homonym System",
+    description: "A system that allows you to search for Yoruba Homonyms",
+    image: "/images/yor.png",
+    tag: ["All", "React"],
+    gitUrl: "https://yoruba-homo-app.netlify.app/",
+    previewUrl: "https://yoruba-orthography.vercel.app/",
+  },
   // {
   //   id: 4,
   //   title: "Blog-Site",
@@ -124,6 +124,15 @@ const projectsData = [
    tag: ["All", "React"],
     gitUrl: "https://github.com/coderQoce/Perfect-Pretence.git",
     previewUrl: "https://perfect-pretence.netlify.app/",
+  },
+   {
+    id: 14,
+    title: "BMW Exclusive",
+    description: "A website to buy BMW cars",
+    image: "/images/bmw.png",
+    tag: ["All", "Html"],
+    gitUrl: "https://github.com/coderQoce/onyxAutos.git",
+    previewUrl: "https://onyx-autos.vercel.app/",
   },
 ];
 
