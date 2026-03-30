@@ -18,10 +18,22 @@ const Scrollup = () => {
     return () => window.removeEventListener("scroll", handleScroll); // Cleanup event listener
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
-    <a href="#" className="scrollup">
+    <button
+      onClick={scrollToTop}
+      className="scrollup"
+      aria-label="Scroll to top of page"
+      type="button"
+    >
       <i className="uil uil-arrow-up scrollup_icon"></i>
-    </a>
+    </button>
   );
 };
 

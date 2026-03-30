@@ -14,24 +14,24 @@ import ProjectsSection from './components/projects/ProjectSection';
 
 
 const App = () => {
-  return (  
-<>
-<Header/>
+  return (
+    <>
+      <Header />
 
-<main className='main'>
-  <Home/>
-  <About/>
-  <Skills />
-  <Heading/>
-  <Services/>
-  <Qualification/>
-  <ProjectsSection/>
-  <Contact/>
-</main>
+      <main className='main'>
+        <Home />
+        <About />
+        <Skills />
+        <Heading />
+        <Services />
+        <Qualification />
+        <ProjectsSection />
+        <Contact />
+      </main>
 
-<Footer/>
-<Scrollup/>
-</>
+      <Footer />
+      <Scrollup />
+    </>
   );
 }
 
