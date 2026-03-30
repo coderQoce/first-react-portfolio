@@ -8,6 +8,11 @@ const Contact = () => {
   const [status, setStatus] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text);
+    // You could add a toast notification here
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -44,39 +49,44 @@ const Contact = () => {
             <div className="contact_card">
               <i className="bx bxl-mail-send contact_card-icon"></i>
 
-
               <h3 className="contact_card-title">Email</h3>
               <span className="contact_card-data">Okequadri23@gmail.com</span>
 
-              <a href="https://Okequadri23@gmail.com" className="contact_button">Hire me <i className="bx bx-right-arrow-alt 
+              <div className="contact_button-group">
+                <button
+                  onClick={() => copyToClipboard('Okequadri23@gmail.com')}
+                  className="copy-button-centered"
+                  title="Copy email"
+                >
+                  <i className="bx bx-copy"></i>
+                </button>
+                <a href="mailto:Okequadri23@gmail.com" className="contact_button">Hire me <i className="bx bx-right-arrow-alt 
                     contact_button-icon"></i></a>
+              </div>
             </div>
 
             <div className="contact_card">
               <i className="bx bxl-whatsapp contact_card-icon"></i>
 
-
               <h3 className="contact_card-title">Whatsapp</h3>
               <span className="contact_card-data">+234 70 449 669 50</span>
 
-              <a href="https://wa.me/2347044966950?text=Hi%2C%20I%20need%20your%20service" className="contact_button">Hire me <i className="bx bx-right-arrow-alt 
+              <a href="https://wa.me/2347044966950?text=Hi%2C%20How%20can%20I%20be%20of%20service%20to%20you" className="contact_button">Hire me <i className="bx bx-right-arrow-alt 
                     contact_button-icon"></i></a>
             </div>
 
             <div className="contact_card">
               <i className="bx bxl-twitter contact_card-icon"></i>
 
-
               <h3 className="contact_card-title">X account</h3>
               <span className="contact_card-data">@BigHarrr</span>
 
-              <a href="https://twitter.com/messages/compose?recipient_id=1442214439554465793&text=Hi%2C%20I%20need%20your%20service" className="contact_button">Hire me <i className="bx bx-right-arrow-alt 
+              <a href="https://twitter.com/messages/compose?recipient_id=1442214439554465793&text=Hi%2C%20How%20can%20I%20be%20of%20service%20to%20you" className="contact_button">Hire me <i className="bx bx-right-arrow-alt 
                     contact_button-icon"></i></a>
             </div>
 
             <div className="contact_card">
               <i className="bx bxl-linkedin contact_card-icon"></i>
-
 
               <h3 className="contact_card-title">LinkedIn</h3>
               <span className="contact_card-data">@Oke Quadri</span>

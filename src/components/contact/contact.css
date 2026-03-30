@@ -56,6 +56,47 @@
     column-gap: 0.25rem;
 }
 
+.contact_button-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: var(--mb-0-75);
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-button {
+    background-color: var(--title-color);
+    color: var(--container-color);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.copy-button:hover {
+    background-color: var(--title-color-dark);
+    transform: translateY(-2px);
+}
+
+.copy-button-centered {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--title-color);
+    transition: all 0.3s ease;
+}
+
+.copy-button-centered:hover {
+    transform: scale(1.1);
+    color: var(--title-color-dark);
+}
+
 .contact_button-icon {
     font-size: 1rem;
     transition: 0.3s;
