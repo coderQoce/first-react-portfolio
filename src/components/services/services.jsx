@@ -21,12 +21,13 @@ const ServiceItem = ({ iconClassName, title, description }) => {
             {isModalOpen && (
                 <div className="services_modal">
                     <div className="services_modal-content">
-                        <a
+                        <button
                             className="services_modal-close"
                             onClick={handleButtonClick}
+                            aria-label="Close modal"
                         >
                             &times;
-                        </a>
+                        </button>
                         <h3 className="services_modal-title">{title}</h3>
                         <p className="services_modal-description">{description}</p>
                     </div>
@@ -56,16 +57,16 @@ const Services = () => {
     ];
     return (
         <section id='service' className='grid services_container'>
-          {servicesData.map((service) => (
-              <ServiceItem 
-                  key={service.title} 
-                  iconClassName={service.icon} 
-                  title={service.title} 
-                  description={service.description} 
-              />
-          ))}
-      </section>        
-  );
+            {servicesData.map((service) => (
+                <ServiceItem
+                    key={service.title}
+                    iconClassName={service.icon}
+                    title={service.title}
+                    description={service.description}
+                />
+            ))}
+        </section>
+    );
 };
 
 export default Services;
