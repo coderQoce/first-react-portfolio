@@ -13,6 +13,11 @@ const Contact = () => {
     // You could add a toast notification here
   };
 
+  const handleLinkClick = (e, url) => {
+    e.preventDefault();
+    window.open(url, '_blank');
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -60,8 +65,14 @@ const Contact = () => {
                 >
                   <i className="bx bx-copy"></i>
                 </button>
-                <a href="mailto:Okequadri23@gmail.com" className="contact_button">Hire me <i className="bx bx-right-arrow-alt 
-                    contact_button-icon"></i></a>
+                <a
+                  href="mailto:Okequadri23@gmail.com"
+                  className="contact_button"
+                  onClick={(e) => handleLinkClick(e, 'mailto:Okequadri23@gmail.com')}
+                >
+                  Hire me
+                  <i className="bx bx-right-arrow-alt contact_button-icon"></i>
+                </a>
               </div>
             </div>
 
@@ -71,8 +82,14 @@ const Contact = () => {
               <h3 className="contact_card-title">Whatsapp</h3>
               <span className="contact_card-data">+234 70 449 669 50</span>
 
-              <a href="https://wa.me/2347044966950?text=Hi%2C%20How%20can%20I%20be%20of%20service%20to%20you" className="contact_button">Hire me <i className="bx bx-right-arrow-alt 
-                    contact_button-icon"></i></a>
+              <a
+                href="https://wa.me/2347044966950?text=Hi%2C%20How%20can%20I%20be%20of%20service%20to%20you"
+                className="contact_button"
+                onClick={(e) => handleLinkClick(e, 'https://wa.me/2347044966950?text=Hi%2C%20How%20can%20I%20be%20of%20service%20to%20you')}
+              >
+                Hire me
+                <i className="bx bx-right-arrow-alt contact_button-icon"></i>
+              </a>
             </div>
 
             <div className="contact_card">
@@ -81,8 +98,14 @@ const Contact = () => {
               <h3 className="contact_card-title">X account</h3>
               <span className="contact_card-data">@BigHarrr</span>
 
-              <a href="https://twitter.com/messages/compose?recipient_id=1442214439554465793&text=Hi%2C%20How%20can%20I%20be%20of%20service%20to%20you" className="contact_button">Hire me <i className="bx bx-right-arrow-alt 
-                    contact_button-icon"></i></a>
+              <a
+                href="https://twitter.com/messages/compose?recipient_id=1442214439554465793&text=Hi%2C%20How%20can%20I%20be%20of%20service%20to%20you"
+                className="contact_button"
+                onClick={(e) => handleLinkClick(e, 'https://twitter.com/messages/compose?recipient_id=1442214439554465793&text=Hi%2C%20How%20can%20I%20be%20of%20service%20to%20you')}
+              >
+                Hire me
+                <i className="bx bx-right-arrow-alt contact_button-icon"></i>
+              </a>
             </div>
 
             <div className="contact_card">
@@ -91,8 +114,14 @@ const Contact = () => {
               <h3 className="contact_card-title">LinkedIn</h3>
               <span className="contact_card-data">@Oke Quadri</span>
 
-              <a href="https://www.linkedin.com/in/oke-quadri-3068b0243?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="contact_button">Hire me <i className="bx bx-right-arrow-alt 
-                    contact_button-icon"></i></a>
+              <a
+                href="https://www.linkedin.com/in/oke-quadri-3068b0243?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                className="contact_button"
+                onClick={(e) => handleLinkClick(e, 'https://www.linkedin.com/in/oke-quadri-3068b0243?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app')}
+              >
+                Hire me
+                <i className="bx bx-right-arrow-alt contact_button-icon"></i>
+              </a>
             </div>
           </div>
         </div>
