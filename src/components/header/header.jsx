@@ -9,10 +9,13 @@ const Header = () => {
         const handleScroll = () => {
             const sections = document.querySelectorAll('section[id]');
             const scrollY = window.pageYOffset;
+            const isMobile = window.innerWidth <= 768;
 
             sections.forEach(current => {
                 const sectionHeight = current.offsetHeight;
-                const sectionTop = current.offsetTop - 100;
+                const sectionTop = isMobile ?
+                    current.offsetTop - 50 :  // Less offset on mobile since header is at bottom
+                    current.offsetTop - 100; // More offset on desktop for header
                 const sectionId = current.getAttribute('id');
 
                 if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
@@ -22,20 +25,34 @@ const Header = () => {
         };
 
         window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleScroll); // Also update on resize
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleScroll);
+        };
     }, []);
 
     const handleNavClick = (e, targetId) => {
         e.preventDefault();
         const element = document.querySelector(targetId);
         if (element) {
-            const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+            // Check if we're on mobile (header at bottom)
+            const isMobile = window.innerWidth <= 768;
+            const header = document.querySelector('.header');
+            let headerHeight = 0;
+
+            if (isMobile) {
+                // On mobile, header is at bottom, so no offset needed
+                headerHeight = 0;
+            } else {
+                // On desktop, header is at top, so account for its height
+                headerHeight = header?.offsetHeight || 0;
+            }
+
             const elementPosition = element.offsetTop - headerHeight - 20;
 
-            window.scrollTo({
-                top: elementPosition,
-                behavior: 'smooth'
-            });
+            // Use instant scroll to prevent jumping
+            window.scrollTo(0, elementPosition);
             setActiveNav(targetId);
         }
         showMenu(false);

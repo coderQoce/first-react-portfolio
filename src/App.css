@@ -56,10 +56,34 @@
     --big-font-size: 2.75rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
+    --h3-font-size: 1.125rem;
     --normal-font-size: 0.938rem;
     --small-font-size: 0.813rem;
     --smaller-font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --big-font-size: 2.5rem;
+    --h1-font-size: 1.375rem;
+    --h2-font-size: 1.125rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.875rem;
+    --small-font-size: 0.75rem;
+    --smaller-font-size: 0.688rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  :root {
+    --big-font-size: 2.25rem;
+    --h1-font-size: 1.25rem;
+    --h2-font-size: 1rem;
+    --h3-font-size: 0.938rem;
+    --normal-font-size: 0.813rem;
+    --small-font-size: 0.688rem;
+    --smaller-font-size: 0.625rem;
   }
 }
 
@@ -136,10 +160,9 @@ img {
 
 /*=============== LAYOUT ===============*/
 .container {
-  max-width: 1024px;
+  max-width: 968px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 1rem;
 }
 
 .grid {
@@ -186,6 +209,14 @@ img {
     width: 22px;
     height: 22px;
   }
+
+  .section {
+    padding: 5rem 0 2rem;
+  }
+
+  .section__subtitle {
+    margin-bottom: 3rem;
+  }
 }
 
 /* For medium devices */
@@ -195,48 +226,61 @@ img {
   }
 
   .section {
-    padding: 2rem 0 4rem;
+    padding: 4rem 0 2rem;
   }
 
   .section__subtitle {
-    margin-bottom: var(--mb-3);
-  }
-}
-
-@media screen and (max-width: 576px) {
-  :root {
-    --big-font-size: 2rem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.2rem;
-    --h3-font-size: 1.1rem;
-    --normal-font-size: 0.938rem;
-    --small-font-size: 0.813rem;
-    --smaller-font-size: 0.75rem;
+    margin-bottom: 2.5rem;
   }
 
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
-    padding: 0 0.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .section__subtitle {
+    margin-bottom: 2rem;
+  }
+
+  .container {
+    margin-left: var(--mb-0-75);
+    margin-right: var(--mb-0-75);
+  }
+
+  .button {
+    padding: 0.875rem 1.5rem;
+    font-size: var(--small-font-size);
   }
 }
 
 /* For small devices */
 @media screen and (max-width: 350px) {
   :root {
-    --big-font-size: 1.875rem;
-    --h1-font-size: 1.375rem;
-    --h2-font-size: 1.125rem;
-    --h3-font-size: 1rem;
-    --normal-font-size: 0.875rem;
-    --small-font-size: 0.75rem;
-    --smaller-font-size: 0.688rem;
+    --big-font-size: 2.25rem;
   }
 
   .container {
     margin-left: var(--mb-0-5);
     margin-right: var(--mb-0-5);
-    padding: 0 0.25rem;
+  }
+
+  .section {
+    padding: 2.5rem 0 1rem;
+  }
+
+  .section__subtitle {
+    margin-bottom: 1.5rem;
+  }
+
+  .button {
+    padding: 0.75rem 1.25rem;
+    font-size: var(--smaller-font-size);
   }
 }
 

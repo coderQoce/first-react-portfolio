@@ -8,7 +8,6 @@ import Services from './components/services/services';
 import Qualification from './components/qualification/qualification';
 import Contact from './components/contact/contact';
 import Footer from './components/footer/footer';
-import Scrollup from './components/scrollup/scrollup';
 import Heading from './components/serviceHeading/heading';
 import ProjectsSection from './components/projects/ProjectSection';
 
@@ -30,7 +29,6 @@ const App = () => {
       </main>
 
       <Footer />
-      <Scrollup />
     </>
   );
 }

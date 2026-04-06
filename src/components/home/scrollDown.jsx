@@ -6,13 +6,22 @@ const ScrollDown = () => {
     e.preventDefault();
     const element = document.querySelector('#about');
     if (element) {
-      const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+      // Check if we're on mobile (header at bottom)
+      const isMobile = window.innerWidth <= 768;
+      let headerHeight = 0;
+
+      if (isMobile) {
+        // On mobile, header is at bottom, so no offset needed
+        headerHeight = 0;
+      } else {
+        // On desktop, header is at top, so account for its height
+        headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+      }
+
       const elementPosition = element.offsetTop - headerHeight - 20;
 
-      window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth'
-      });
+      // Use instant scroll to prevent jumping
+      window.scrollTo(0, elementPosition);
     }
   };
 

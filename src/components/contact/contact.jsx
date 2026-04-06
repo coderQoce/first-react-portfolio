@@ -27,18 +27,27 @@ const Contact = () => {
     setIsLoading(true);
     setStatus('');
 
+    // Log form data for debugging
+    console.log('Sending email with form data:', {
+      name: form.current.name.value,
+      email: form.current.email.value,
+      project: form.current.project.value
+    });
+
     emailjs
       .sendForm('service_vjbik6l', 'template_naegcmo', form.current, {
         publicKey: 'HH_X26HGBlXv-ehYf',
       })
       .then(
-        () => {
+        (result) => {
+          console.log('Email sent successfully:', result.text);
           setStatus('SUCCESS');
           form.current.reset();
           setIsLoading(false);
           setTimeout(() => setStatus(''), 5000);
         },
         (error) => {
+          console.error('Email send failed:', error.text);
           setStatus('FAILED');
           setIsLoading(false);
           setTimeout(() => setStatus(''), 5000);

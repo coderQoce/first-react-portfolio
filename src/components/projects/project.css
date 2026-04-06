@@ -388,8 +388,8 @@
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
     .projects-list {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
     }
 }
 
@@ -398,129 +398,58 @@
         padding: 40px 15px;
     }
 
-    .section-title {
-        font-size: 2.2rem;
-        margin-bottom: 25px;
-    }
-
-    .tags-container {
-        gap: 10px;
-        margin-bottom: 30px;
-    }
-
-    .project-tag {
-        padding: 8px 18px;
-        font-size: 0.9rem;
-    }
-
     .projects-list {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 20px;
-    }
-
-    .enhanced-project-card {
-        height: 400px;
-    }
-
-    .project-image-container {
-        height: 180px;
-    }
-
-    .project-title {
-        font-size: 1.2rem;
-    }
-
-    .project-description {
-        font-size: 0.85rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .projects-section {
-        padding: 40px 15px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
     }
 
     .section-title {
-        font-size: 2rem;
-        margin-bottom: 25px;
+        font-size: var(--h1-font-size);
+        margin-bottom: 2rem;
     }
 
-    .tags-container {
-        gap: 10px;
-        margin-bottom: 30px;
-        max-width: 100%;
+    .filter-buttons {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
     }
 
-    .project-tag {
-        padding: 8px 18px;
-        font-size: 0.9rem;
-    }
-
-    .projects-list {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 20px;
-    }
-
-    .enhanced-project-card {
-        height: 400px;
-    }
-
-    .project-image-container {
-        height: 180px;
-    }
-
-    .icon-link {
-        width: 42px;
-        height: 42px;
-    }
-
-    .icon {
-        width: 19px;
-        height: 19px;
-    }
-
-    .project-title {
-        font-size: 1.15rem;
-    }
-
-    .project-description {
-        font-size: 0.85rem;
+    .tab-button {
+        padding: 0.5rem 1rem;
+        font-size: var(--small-font-size);
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 576px) {
     .projects-section {
         padding: 30px 10px;
     }
 
-    .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-    }
-
-    .tags-container {
-        gap: 8px;
-        margin-bottom: 25px;
-        max-width: 100%;
-    }
-
-    .project-tag {
-        padding: 6px 15px;
-        font-size: 0.85rem;
-    }
-
     .projects-list {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-template-columns: 1fr;
         gap: 15px;
     }
 
+    .section-title {
+        font-size: var(--h1-font-size);
+        margin-bottom: 1.5rem;
+    }
+
+    .filter-buttons {
+        margin-bottom: 1.5rem;
+    }
+
+    .tab-button {
+        padding: 0.4rem 0.8rem;
+        font-size: var(--smaller-font-size);
+    }
+
     .enhanced-project-card {
-        height: 340px;
-        max-width: 100%;
+        height: 380px;
     }
 
     .project-image-container {
-        height: 140px;
+        height: 160px;
     }
 
     .icon-link {
@@ -532,14 +461,14 @@
         width: 18px;
         height: 18px;
     }
+}
 
-    .project-title {
-        font-size: 1.1rem;
-    }
+.project-title {
+    font-size: 1.1rem;
+}
 
-    .project-description {
-        font-size: 0.8rem;
-    }
+.project-description {
+    font-size: 0.8rem;
 }
 
 @media screen and (max-width: 350px) {
@@ -548,36 +477,30 @@
     }
 
     .section-title {
-        font-size: 1.6rem;
+        font-size: var(--h2-font-size);
+        margin-bottom: 1rem;
     }
 
-    .project-tag {
-        padding: 5px 12px;
-        font-size: 0.8rem;
+    .filter-buttons {
+        margin-bottom: 1rem;
+        justify-content: center;
+    }
+
+    .tab-button {
+        padding: 0.375rem 0.75rem;
+        font-size: var(--tiny-font-size);
     }
 
     .projects-list {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 12px;
+        gap: 15px;
     }
 
     .enhanced-project-card {
-        height: 320px;
-        max-width: 100%;
+        height: 350px;
     }
 
     .project-image-container {
-        height: 120px;
-    }
-
-    .project-title {
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .project-description {
-        font-size: 0.75rem;
-        margin-bottom: 1rem;
+        height: 140px;
     }
 
     .icon-link {
@@ -588,5 +511,13 @@
     .icon {
         width: 16px;
         height: 16px;
+    }
+
+    .project-title {
+        font-size: 1rem;
+    }
+
+    .project-description {
+        font-size: 0.75rem;
     }
 }

@@ -186,6 +186,10 @@
     .contact_container {
         column-gap: 3rem;
     }
+
+    .contact_info {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* For medium devices */
@@ -196,22 +200,30 @@
     }
 
     .contact_info {
-        justify-content: center;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .contact_form {
-        margin: 0 auto;
+        padding: 2rem 1.5rem;
     }
 
+    .contact_card {
+        padding: 1.5rem;
+    }
+
+    .contact_title {
+        font-size: var(--h2-font-size);
+    }
 }
 
 @media screen and (max-width: 576px) {
-    .contact_info {
-        grid-template-columns: 1fr;
+    .contact_container {
+        padding: 2rem 1rem;
     }
 
     .contact_form {
-        width: 100%;
+        padding: 1.5rem 1rem;
     }
 
     .contact_form-div {
