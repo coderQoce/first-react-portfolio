@@ -15,7 +15,11 @@ const Contact = () => {
 
   const handleLinkClick = (e, url) => {
     e.preventDefault();
-    window.open(url, '_blank');
+    if (url.startsWith('mailto:')) {
+      window.location.href = url;
+    } else {
+      window.open(url, '_blank');
+    }
   };
 
   const sendEmail = (e) => {

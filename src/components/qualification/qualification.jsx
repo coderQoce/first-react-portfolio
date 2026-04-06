@@ -155,6 +155,49 @@ const Qualification = () => {
                             </div>
 
                         </div>
+                        <div className="qualification_data">
+                            <div>
+                                <h3 className="qualification_title">Front End Developer</h3>
+                                <span className="qualification_subtitle">Caremeal</span>
+                                <div className="qualification_calender">
+                                    <i className="uil uil-calendar-alt">
+                                        2025
+                                    </i>
+                                </div>
+                            </div>
+                            <div> <span className="qualififcation_rounder"></span>
+                                <span className="qualification_line"></span></div>
+                        </div>
+                        <div className="qualification_data">
+                            <div></div>
+                            <div>
+                                <span className="qualififcation_rounder"></span>
+                                <span className="qualification_line"></span>
+                            </div>
+                            <div>
+                                <h3 className="qualification_title">Front End Developer Intern</h3>
+                                <span className="qualification_subtitle">Teeket</span>
+                                <div className="qualification_calender">
+                                    <i className="uil uil-calendar-alt">
+                                        2025 - Present
+                                    </i>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className="qualification_data">
+                            <div>
+                                <h3 className="qualification_title">Frontend Developer (App)</h3>
+                                <span className="qualification_subtitle">Sharegrid</span>
+                                <div className="qualification_calender">
+                                    <i className="uil uil-calendar-alt">
+                                        2025 - Present
+                                    </i>
+                                </div>
+                            </div>
+                            <div> <span className="qualififcation_rounder"></span>
+                                <span className="qualification_line"></span></div>
+                        </div>
 
                     </div>
                 </div>

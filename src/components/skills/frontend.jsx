@@ -1,92 +1,98 @@
 import React from 'react'
 
 const Frontend = () => {
-  return (
-  <div className="skills_content">
-    <h3 className="skills_title"> Frontend Developer</h3>
+    return (
+        <div className="skills_content">
+            <h3 className="skills_title"> Frontend Developer</h3>
 
-    <div className="skills_box">
-        <div className="skills_group">
-            <div className="skills_data">
-                <i className="bx bx-badge-check"></i>
+            <div className="skills_box">
+                <div className="skills_group">
+                    <div className="skills_data">
+                        <i className="bx bx-badge-check"></i>
 
-                <div>
-                    <h3 className="skills_name">HTML</h3>
-                    <span className="skills_level">Advanced</span>
+                        <div>
+                            <h3 className="skills_name">HTML</h3>
+                            <span className="skills_level">Advanced</span>
+                        </div>
+                    </div>
+
+                    <div className="skills_data">
+                        <i className="bx bx-badge-check"></i>
+
+                        <div>
+                            <h3 className="skills_name">CSS</h3>
+                            <span className="skills_level">Advanced</span>
+                        </div>
+                    </div>
+
+                    <div className="skills_data">
+                        <i className="bx bx-badge-check"></i>
+
+                        <div>
+                            <h3 className="skills_name">JAVASCRIPT</h3>
+                            <span className="skills_level">Intermidiate</span>
+                        </div>
+                    </div>
+                    <div className="skills_data">
+                        <i className="bx bx-badge-check"></i>
+
+                        <div>
+                            <h3 className="skills_name">GIT</h3>
+                            <span className="skills_level">Intermidiate</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div className="skills_data">
-                <i className="bx bx-badge-check"></i>
+                <div className="skills_group">
+                    <div className="skills_data">
+                        <i className="bx bx-badge-check"></i>
 
-                <div>
-                    <h3 className="skills_name">CSS</h3>
-                    <span className="skills_level">Advanced</span>
-                </div>
-            </div>
+                        <div>
+                            <h3 className="skills_name">BOOTSTRAP</h3>
+                            <span className="skills_level">Advanced</span>
+                        </div>
+                    </div>
 
-            <div className="skills_data">
-                <i className="bx bx-badge-check"></i>
+                    <div className="skills_data">
+                        <i className="bx bx-badge-check"></i>
 
-                <div>
-                    <h3 className="skills_name">JAVASCRIPT</h3>
-                    <span className="skills_level">Intermidiate</span>
-                </div>
-            </div>
-            <div className="skills_data">
-                <i className="bx bx-badge-check"></i>
+                        <div>
+                            <h3 className="skills_name">TAILWIND  CSS</h3>
+                            <span className="skills_level">Intermidiate</span>
+                        </div>
+                    </div>
 
-                <div>
-                    <h3 className="skills_name">GIT</h3>
-                    <span className="skills_level">Intermidiate</span>
+                    <div className="skills_data">
+                        <i className="bx bx-badge-check"></i>
+
+                        <div>
+                            <h3 className="skills_name">TYPESCRIPT</h3>
+                            <span className="skills_level">Intermidiate</span>
+                        </div>
+                    </div>
+
+                    <div className="skills_data">
+                        <i className="bx bx-badge-check"></i>
+
+                        <div>
+                            <h3 className="skills_name">REACT</h3>
+                            <span className="skills_level">Intermidiate</span>
+                        </div>
+                    </div>
+
+                    <div className="skills_data">
+                        <i className="bx bx-badge-check"></i>
+
+                        <div>
+                            <h3 className="skills_name">REACT NATIVE</h3>
+                            <span className="skills_level">Intermediate</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-
-        <div className="skills_group">
-            <div className="skills_data">
-                <i className="bx bx-badge-check"></i>
-
-                <div>
-                    <h3 className="skills_name">BOOTSTRAP</h3>
-                    <span className="skills_level">Advanced</span>
-                </div>
-            </div>
-
-            <div className="skills_data">
-                <i className="bx bx-badge-check"></i>
-
-                <div>
-                    <h3 className="skills_name">TAILWIND  CSS</h3>
-                    <span className="skills_level">Intermidiate</span>
-                </div>
-            </div>
-
-            <div className="skills_data">
-                <i className="bx bx-badge-check"></i>
-
-                <div>
-                    <h3 className="skills_name">TYPESCRIPT</h3>
-                    <span className="skills_level">Intermidiate</span>
-                </div>
-            </div>
-
-            
-
-
-            <div className="skills_data">
-                <i className="bx bx-badge-check"></i>
-
-                <div>
-                    <h3 className="skills_name">REACT</h3>
-                    <span className="skills_level">Intermidiate</span>
-                </div>
-            </div>
-
-        </div>
-    </div>
-  </div>
-  )
+    )
 }
 
 export default Frontend

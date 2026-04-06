@@ -1,7 +1,8 @@
 .contact_container {
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    animation: fadeInUp 0.8s ease-out 1s both;
     justify-content: center;
-    column-gap: 6rem;
     padding-bottom: 3rem;
 }
 
