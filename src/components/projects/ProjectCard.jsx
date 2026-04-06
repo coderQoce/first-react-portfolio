@@ -3,6 +3,12 @@ import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import "./project.css";
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+  const handleIconClick = (e, url) => {
+    e.preventDefault();
+    e.stopPropagation();
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div className="project-card">
       <div
@@ -10,12 +16,20 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
         style={{ backgroundImage: `url(${imgUrl})` }}
       >
         <div className="overlay">
-          <a href={gitUrl} target="_blank" rel="noopener noreferrer" className="icon-link">
+          <button
+            onClick={(e) => handleIconClick(e, gitUrl)}
+            className="icon-link"
+            aria-label="View GitHub repository"
+          >
             <CodeBracketIcon className="icon" />
-          </a>
-          <a href={previewUrl} target="_blank" rel="noopener noreferrer" className="icon-link">
+          </button>
+          <button
+            onClick={(e) => handleIconClick(e, previewUrl)}
+            className="icon-link"
+            aria-label="View live preview"
+          >
             <EyeIcon className="icon" />
-          </a>
+          </button>
         </div>
       </div>
       <div className="project-details">

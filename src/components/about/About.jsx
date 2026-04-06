@@ -6,7 +6,7 @@ import Info from './info';
 
 function About() {
   return (
-    <section className="about secttion" id="about">
+    <section className="about section" id="about">
       <h2 className="section_title">About Me</h2>
       <div className="about_container container grid">
         <img src={AboutImg} alt="" className='about_img' />

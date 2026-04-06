@@ -107,8 +107,8 @@ const EnhancedProjectSection = () => {
 
   if (isLoading) {
     return (
-      <section id="projects" className="projects-section">
-        <h2 className="section-title" id="portfolio">My Projects</h2>
+      <section id="portfolio" className="projects-section">
+        <h2 className="section-title">My Projects</h2>
         <div className="controls-container">
           <div className="tags-container">
             {availableTags.map((tag, index) => (
@@ -138,10 +138,9 @@ const EnhancedProjectSection = () => {
   }
 
   return (
-    <section id="projects" className="projects-section">
+    <section id="portfolio" className="projects-section">
       <motion.h2
         className="section-title"
-        id="portfolio"
         initial={{ opacity: 0, y: -20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}

@@ -2,13 +2,13 @@ import React, { useState, useRef, useEffect } from "react";
 import { CodeBracketIcon, EyeIcon, CalendarIcon, UserGroupIcon, StarIcon } from "@heroicons/react/24/outline";
 import "./project.css";
 
-const EnhancedProjectCard = ({ 
-  title, 
-  description, 
-  image, 
-  gitUrl, 
-  previewUrl, 
-  tags, 
+const EnhancedProjectCard = ({
+  title,
+  description,
+  image,
+  gitUrl,
+  previewUrl,
+  tags,
   highlights = [],
   duration = "",
   teamSize = "",
@@ -45,6 +45,12 @@ const EnhancedProjectCard = ({
     setImageError(true);
   };
 
+  const handleIconClick = (e, url) => {
+    e.preventDefault();
+    e.stopPropagation();
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div className="enhanced-project-card">
       <div className="project-image-container">
@@ -66,29 +72,25 @@ const EnhancedProjectCard = ({
           </div>
         )}
         <div className="overlay">
-          <a 
-            href={gitUrl} 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <button
+            onClick={(e) => handleIconClick(e, gitUrl)}
             className="icon-link"
             aria-label="View GitHub repository"
           >
             <CodeBracketIcon className="icon" />
-          </a>
+          </button>
           {previewUrl && previewUrl !== "?" && previewUrl !== "..///" && (
-            <a 
-              href={previewUrl} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <button
+              onClick={(e) => handleIconClick(e, previewUrl)}
               className="icon-link"
               aria-label="View live preview"
             >
               <EyeIcon className="icon" />
-            </a>
+            </button>
           )}
         </div>
       </div>
-      
+
       <div className="project-details">
         <div className="project-header">
           <h3 className="project-title">{title}</h3>
@@ -113,9 +115,9 @@ const EnhancedProjectCard = ({
             )}
           </div>
         </div>
-        
+
         <p className="project-description">{description}</p>
-        
+
         {highlights.length > 0 && (
           <div className="project-highlights">
             <h4>Key Features:</h4>
@@ -126,7 +128,7 @@ const EnhancedProjectCard = ({
             </ul>
           </div>
         )}
-        
+
         <div className="project-tags">
           {tags.filter(tag => tag !== "All").map((tag, index) => (
             <span key={index} className="project-tag">

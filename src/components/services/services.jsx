@@ -56,7 +56,7 @@ const Services = () => {
         },
     ];
     return (
-        <section id='service' className='grid services_container'>
+        <section id='services' className='grid services_container'>
             {servicesData.map((service) => (
                 <ServiceItem
                     key={service.title}

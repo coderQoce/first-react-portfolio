@@ -71,7 +71,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body,
@@ -136,9 +136,10 @@ img {
 
 /*=============== LAYOUT ===============*/
 .container {
-  max-width: 968px;
+  max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1rem;
 }
 
 .grid {
@@ -202,17 +203,40 @@ img {
   }
 }
 
-@media screen and (max-width: 576px) {}
-
-/* For small devices */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 576px) {
   :root {
-    --big-font-size: 2.25rem;
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.2rem;
+    --h3-font-size: 1.1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
   }
 
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
+    padding: 0 0.5rem;
+  }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+  :root {
+    --big-font-size: 1.875rem;
+    --h1-font-size: 1.375rem;
+    --h2-font-size: 1.125rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.875rem;
+    --small-font-size: 0.75rem;
+    --smaller-font-size: 0.688rem;
+  }
+
+  .container {
+    margin-left: var(--mb-0-5);
+    margin-right: var(--mb-0-5);
+    padding: 0 0.25rem;
   }
 }
 

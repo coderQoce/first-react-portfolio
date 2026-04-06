@@ -15,6 +15,12 @@ const ProjectTag = ({ name, onClick, isSelected }) => {
 };
 
 const ProjectCard = ({ title, description, image, gitUrl, previewUrl, tags }) => {
+  const handleIconClick = (e, url) => {
+    e.preventDefault();
+    e.stopPropagation();
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <motion.div
       className="enhanced-project-card"
@@ -37,18 +43,26 @@ const ProjectCard = ({ title, description, image, gitUrl, previewUrl, tags }) =>
           <span>Image not available</span>
         </div>
         <div className="overlay">
-          <a href={gitUrl} target="_blank" rel="noopener noreferrer" className="icon-link">
+          <button
+            onClick={(e) => handleIconClick(e, gitUrl)}
+            className="icon-link"
+            aria-label="View GitHub repository"
+          >
             <svg className="icon" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
             </svg>
-          </a>
+          </button>
           {previewUrl && previewUrl !== "?" && previewUrl !== "..///" && (
-            <a href={previewUrl} target="_blank" rel="noopener noreferrer" className="icon-link">
+            <button
+              onClick={(e) => handleIconClick(e, previewUrl)}
+              className="icon-link"
+              aria-label="View live preview"
+            >
               <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
               </svg>
-            </a>
+            </button>
           )}
         </div>
       </div>
@@ -77,10 +91,9 @@ const ProjectsSection = () => {
   }, [selectedTag]);
 
   return (
-    <section id="projects" className="projects-section">
+    <section id="portfolio" className="projects-section">
       <motion.h2
         className="section-title"
-        id="portfolio"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}

@@ -192,8 +192,9 @@
   .nav_list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 1rem;
     text-align: center;
+    padding: 0 0.5rem;
   }
 
   .nav_link {
